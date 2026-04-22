@@ -11,3 +11,12 @@ class TaskManager:
             "priority": priority
         }
         self.counter += 1
+    
+    def deleteTask(self, task_id):
+        """
+        Deletes a task by its ID.
+        """
+        if task_id in self.tasks:
+            del self.tasks[task_id]
+            return True
+        return False
